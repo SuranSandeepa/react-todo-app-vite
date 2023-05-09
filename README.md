@@ -9,7 +9,7 @@ Real-time updates: The task list updates dynamically as tasks are added, complet
 Responsive design: The app is designed to be responsive and works well on different screen sizes.
 
 ### Getting Started
-Clone the repository: git clone <repository_url>
+Clone the repository: git clone https://github.com/SuranSandeepa/react-todo-app-vite.git
 Install dependencies: npm install
 Start the development server: npm run dev
 Open the app in your browser: http://localhost:3000

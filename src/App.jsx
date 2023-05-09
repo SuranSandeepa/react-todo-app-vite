@@ -15,18 +15,29 @@ function TodoList() {
 
   const handleAddTask = () => {
     // Logic for adding a new task to the list
+    if (newTask.trim() !== "") {
+      setTasks([...tasks, newTask]);
+      setNewTask("");
+    }
   };
 
   const handleDeleteTask = (index) => {
     // Logic for deleting a task from the list
+    const updatedTasks = [...tasks];
+    updatedTasks.splice(index, 1);
+    setTasks(updatedTasks);
+  };
+
+  const handleCompleteTask = (index) => { 
+    // Logic for marking a task as completed
+    const updatedTasks = [...tasks];
+    updatedTasks[index] = `✅ ${updatedTasks[index]}`;
+    setTasks(updatedTasks);
   };
 
   return (
     <div className="todo-list">
-      <h2>Todo List</h2>
-      {/* Input field for adding new tasks */}
-      {/* List of tasks */}
-      {/* Buttons for marking tasks as completed or deleting them */}
+
     </div>
   );
 }

@@ -37,7 +37,25 @@ function TodoList() {
 
   return (
     <div className="todo-list">
+      <h2>Todo List</h2>
+      <input
+        type="text"
+        value={newTask}
+        onChange={(e) => setNewTask(e.target.value)}
+        placeholder="Enter a new task"
+      />
 
+      <button onClick={handleAddTask}>Add Task</button>
+
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>
+            <span>{task}</span>
+            <button onClick={() => handleCompleteTask(index)}>Complete</button>
+            <button onClick={() => handleDeleteTask(index)}>Delete</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

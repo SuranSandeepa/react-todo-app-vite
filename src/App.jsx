@@ -8,8 +8,8 @@ function App() {
   );
 }
 
-
 function TodoList() {
+  //state variables for tasks and new task input
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
 
